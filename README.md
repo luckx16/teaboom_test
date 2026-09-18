@@ -1,9 +1,29 @@
-# Карточка товара Teaboom.ru
+<h1 align="center">Карточка товара Teaboom.ru</h1>
 
-Вёрстка верхней части карточки товара интернет-магазина «Чайный Бум».
-За основу взят товар [Ананасовый улун](https://teaboom.ru/product/ananasovij-ulun).
+<p align="center">
+  Вёрстка верхней части карточки товара интернет-магазина «Чайный Бум»
+</p>
 
-Тестовое задание на позицию HTML-верстальщика.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-семантика-E34F26?logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/SCSS-модульная_структура-CC6699?logo=sass&logoColor=white" alt="SCSS">
+  <img src="https://img.shields.io/badge/JavaScript-без_зависимостей-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Lighthouse-100_%2F_100_%2F_100_%2F_100-0CCE6B?logo=lighthouse&logoColor=white" alt="Lighthouse 100">
+</p>
+
+<p align="center">
+  <a href="https://luckx16.github.io/teaboom_test/">Демо</a>
+  ·
+  <a href="https://teaboom.ru/product/ananasovij-ulun">Товар на сайте</a>
+</p>
+
+<p align="center">
+  <img src="docs/preview-desktop.jpg" alt="Карточка товара на десктопе" width="860">
+</p>
+
+<p align="center">
+  <img src="docs/preview-mobile.jpg" alt="Мобильная версия карточки" width="250">
+</p>
 
 ## Запуск
 
