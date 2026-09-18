@@ -1,0 +1,13 @@
+{
+  "name": "teaboom-product-card",
+  "version": "1.0.0",
+  "description": "Карточка товара интернет-магазина Teaboom.ru (тестовое задание)",
+  "private": true,
+  "scripts": {
+    "dev": "sass --watch styles/main.scss css/main.css",
+    "build": "sass styles/main.scss css/main.css --style=compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}
