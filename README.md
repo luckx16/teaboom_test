@@ -14,6 +14,8 @@
 <p align="center">
   <a href="https://luckx16.github.io/teaboom_test/">Демо</a>
   ·
+  <a href="https://github.com/luckx16/teaboom_test">Репозиторий</a>
+  ·
   <a href="https://teaboom.ru/product/ananasovij-ulun">Товар на сайте</a>
 </p>
 
