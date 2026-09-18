@@ -1,0 +1,94 @@
+@use '../helpers/media' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+.button--cart {
+  width: 100%;
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+  box-shadow: 0 2px 0 rgba(32, 32, 32, 0.12);
+
+  &:hover {
+    background-color: var(--color-accent-hover);
+    box-shadow: 0 6px 16px rgba(224, 195, 24, 0.45);
+  }
+
+  &:active {
+    background-color: var(--color-accent-active);
+    box-shadow: none;
+    transform: translateY(1px);
+  }
+
+  &.is-added {
+    background-color: var(--color-success);
+    color: #ffffff;
+    box-shadow: none;
+  }
+}
+
+.button--icon {
+  flex: 0 0 auto;
+  width: 3.25rem;
+  padding: 0;
+  border-color: var(--color-line);
+  background-color: var(--color-surface);
+  color: var(--color-ink-muted);
+
+  &:hover {
+    border-color: var(--color-sale);
+    color: var(--color-sale);
+  }
+
+  &[aria-pressed='true'] {
+    border-color: var(--color-sale);
+    background-color: #fdeaea;
+    color: var(--color-sale);
+
+    svg path {
+      fill: currentColor;
+    }
+  }
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: var(--gap-xs);
+  background: none;
+  color: var(--color-ink-muted);
+  font-size: 0.8125rem;
+  text-decoration: underline;
+  text-decoration-color: var(--color-line);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--color-ink);
+    text-decoration-color: currentColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

@@ -1,0 +1,44 @@
+@use '../helpers/media' as *;
+
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--gap-sm);
+}
+
+.price__current {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+
+  @include from($bp-desktop) {
+    font-size: 2.375rem;
+  }
+}
+
+.price__old {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--gap-xs);
+  color: var(--color-ink-muted);
+  font-size: 0.9375rem;
+
+  s {
+    font-variant-numeric: tabular-nums;
+    text-decoration-color: var(--color-sale);
+  }
+}
+
+.price__save {
+  padding: 2px 0.5rem;
+  border-radius: var(--radius-sm);
+  background-color: #fdeaea;
+  color: var(--color-sale);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}

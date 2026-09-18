@@ -1,0 +1,146 @@
+@use '../helpers/media' as *;
+
+dialog:not([open]) {
+  display: none;
+}
+
+.lightbox,
+.modal {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  max-width: min(92vw, 45rem);
+  max-height: 92vh;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  overflow: visible;
+
+  &::backdrop {
+    background-color: rgba(32, 32, 32, 0.72);
+  }
+}
+
+.lightbox__close,
+.modal__close {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-ink);
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: var(--color-accent);
+  }
+}
+
+.lightbox {
+  width: fit-content;
+  max-width: 92vw;
+  line-height: 0;
+}
+
+.lightbox__image {
+  width: auto;
+  max-width: 92vw;
+  max-height: 86vh;
+  border-radius: var(--radius-lg);
+  object-fit: contain;
+}
+
+.modal {
+  width: min(92vw, 26.25rem);
+  padding: var(--gap-lg) var(--gap-md) var(--gap-md);
+  overflow-y: auto;
+
+  @include from($bp-tablet) {
+    padding: var(--gap-lg);
+  }
+}
+
+.modal__title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.modal__subtitle {
+  margin-top: 0.125rem;
+  color: var(--color-ink-muted);
+  font-size: 0.8125rem;
+}
+
+.modal__thanks {
+  padding: var(--gap-md) 0;
+  color: var(--color-success);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.125rem;
+}
+
+.rating__star {
+  color: var(--color-line);
+  font-size: 1.875rem;
+  line-height: 1;
+  transition: color 0.1s ease;
+}
+
+.rating__star:hover,
+.rating__star:hover ~ .rating__star,
+.rating input:checked ~ .rating__star {
+  color: var(--color-accent-active);
+}
+
+.rating input:focus-visible + .rating__star {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.field__label {
+  color: var(--color-ink-muted);
+  font-size: 0.8125rem;
+}
+
+.field__control {
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  color: var(--color-ink);
+  font: inherit;
+  resize: vertical;
+  transition: border-color 0.15s ease;
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-ink-muted);
+  }
+}
