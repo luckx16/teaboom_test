@@ -1,0 +1,12 @@
+@use 'normalize';
+@use 'variables';
+@use 'fonts';
+@use 'globals';
+
+@use 'blocks/breadcrumbs';
+@use 'blocks/product';
+@use 'blocks/variants';
+@use 'blocks/price';
+@use 'blocks/button';
+@use 'blocks/summary';
+@use 'blocks/dialog';

@@ -1,0 +1,8 @@
+$bp-tablet: 48rem;
+$bp-desktop: 75rem;
+
+@mixin from($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

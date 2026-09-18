@@ -1,0 +1,63 @@
+@use 'helpers/media' as *;
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-text);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--color-accent-active);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
+:root {
+  --page-inline: 1rem;
+  --sticky-top: 0px;
+
+  @include from($bp-tablet) {
+    --page-inline: 1.25rem;
+  }
+
+  @include from($bp-desktop) {
+    --page-inline: 2.5rem;
+  }
+}
+
+.page {
+  max-width: 77.5rem;
+  margin: 0 auto;
+  padding: 1rem var(--page-inline) 3rem;
+
+  @include from($bp-tablet) {
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+  }
+
+  @include from($bp-desktop) {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+}
