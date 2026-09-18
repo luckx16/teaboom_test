@@ -112,16 +112,17 @@ favicon/
 
 ## Производительность
 
-Lighthouse (desktop), локальный сервер:
+Lighthouse по опубликованному адресу:
 
-| Категория | Оценка |
-| --------- | ------ |
-| Performance | 100 |
-| Accessibility | 100 |
-| Best Practices | 100 |
-| SEO | 100 |
+| Категория | Desktop | Mobile |
+| --------- | ------- | ------ |
+| Performance | 100 | 97 |
+| Accessibility | 100 | 100 |
+| Best Practices | 100 | 100 |
+| SEO | 100 | 100 |
 
-LCP 0,5 с · CLS 0 · TBT 0 мс
+Desktop: LCP 0,5 с · CLS 0 · TBT 0 мс
+Mobile (эмуляция медленного 4G): LCP 2,1 с · CLS 0 · TBT 30 мс
 
 Что для этого сделано:
 
